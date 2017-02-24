@@ -1,0 +1,20 @@
+{
+  "name": "angular-books-lab",
+  "description": "booksorganizer",
+  "main": "app.js",
+  "authors": [
+    "GA SF WDI"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/monzelb/angular-books-crud-lab",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
