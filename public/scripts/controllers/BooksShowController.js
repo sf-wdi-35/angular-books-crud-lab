@@ -16,13 +16,12 @@ function BooksShowController (  $http,   $routeParams,   $location  ) {
     vm.book = res.data;
   });
 
-  vm.deleteBook = function (song) {
+  vm.deleteBook = function (book) {
     $http({
       method: 'DELETE',
       url: 'https://super-crud.herokuapp.com/books/' + bookId
     }).then(function successCallback(json) {
-      var index = vm.books.indexOf(book);
-      vm.books.splice(index,1)
+      $location.path('/');
     }, function errorCallback(response) {
       console.log('There was an error deleting the data', response);
     });

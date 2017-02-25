@@ -25,4 +25,55 @@
       </div>
     </div>
   </div>
+
+  <div class='row'>
+    <div class='col-md-6 col-md-offset-3'>
+      <form class="form-horizontal" ng-submit="booksIndexCtrl.createBook()">
+        <fieldset>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label">Title</label>
+            <div class="col-md-4">
+            <input id="title" ng-model="booksIndexCtrl.newBook.title" type="text" class="form-control input-md" required="">
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label">Author</label>
+            <div class="col-md-4">
+            <input ng-model="booksIndexCtrl.newBook.author" type="text" class="form-control input-md">
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label">Release Date</label>
+            <div class="col-md-4">
+            <input ng-model="booksIndexCtrl.newBook.releaseDate" type="text" class="form-control input-md">
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label">Image URL</label>
+            <div class="col-md-4">
+            <input ng-model="booksIndexCtrl.newBook.image" type="text" class="form-control input-md">
+            </div>
+          </div>
+
+
+          <!-- Button -->
+          <div class="form-group">
+            <label class="col-md-4 control-label">📕</label>
+            <div class="col-md-4">
+              <button class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
 </div>
