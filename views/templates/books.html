@@ -1,0 +1,9 @@
+<div class="container" ng-repeat="book in bic.data.books">
+  <div class="book-panel">    
+    <img src="{{ book.image }}" alt="book pic">
+    <p>Title: {{ book.title }}</p>
+    <p>Author: {{ book.author }}</p>
+    <p>Date Released: {{ book.releaseDate }}</p>
+    <hr>
+  </div>
+</div>
