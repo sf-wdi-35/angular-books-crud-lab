@@ -11,6 +11,11 @@ function config(   $routeProvider,  $locationProvider) {
       controllerAs: "bic",
       controller: "BooksIndexController"
     })
+    .when("/books/:id", {
+      templateUrl: "/templates/books-show.html",
+      controllerAs: "bsc",
+      controller: "BooksShowController"
+    })
 
   $locationProvider.html5Mode({
     enabled: true,
