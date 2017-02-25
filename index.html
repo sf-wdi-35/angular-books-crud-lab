@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>📚</title>
+    <title>📚 booooks</title>
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="/public/styles/styles.css">
@@ -19,9 +19,9 @@
 
 
     <!-- APPLICATION SCRIPTS -->
-    <script src="/public/scripts/app.js"></script>
-    <script src="/public/scripts/controllers/BooksIndexController.js"></script>
-    <!-- <script src="/public/scripts/controllers/BooksShowController.js"></script> -->
+    <script type="text/javascript" src="/public/scripts/app.js"></script>
+    <script type="text/javascript" src="/public/scripts/controllers/BooksIndexController.js"></script>
+    <script type="text/javascript" src="/public/scripts/controllers/BooksShowController.js"></script>
 
   </head>
   <body>
@@ -29,12 +29,8 @@
       <h1 class='text-center'>READ'EM B👀KS</h1>
     </div>
     <br>
-    <div class='container'>
-      <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-          <div ng-view></div>
-        </div>
-      </div>
-    </div>
+
+    <div ng-view></div>
+
   </body>
 </html>

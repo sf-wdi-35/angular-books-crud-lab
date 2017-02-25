@@ -12,11 +12,14 @@ function config(   $routeProvider,  $locationProvider   ) {
       controllerAs: 'booksIndexCtrl',
       controller: 'BooksIndexController'
     })
-    // .when('/books/:id', {
-    //   templateUrl: '/templates/books-show.html',
-    //   controllerAs: 'booksShowCtrl',
-    //   controller: 'BooksShowController'
-    // });
+    .when('/books/:id', {
+      templateUrl: '/templates/books-show.html',
+      controllerAs: 'booksShowCtrl',
+      controller: 'BooksShowController'
+    })
+    .otherwise({
+      redirectTo: '/'
+    });
 
   $locationProvider.html5Mode({
     enabled: true,
