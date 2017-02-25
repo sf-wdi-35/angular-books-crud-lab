@@ -1,5 +1,3 @@
-
-
 angular
   .module('bookApp', ['ngRoute'])
   .config(config);
@@ -10,13 +8,13 @@ function config ($routeProvider, $locationProvider) {
   $routeProvider
     .when('/', {
       templateUrl: '/templates/books-index.html',
-      controllerAs: 'booksIndexCtrl',
-      controller: 'BooksIndexController'
+      controllerAs: 'bookIndexCtrl',
+      controller: 'BookIndexController'
     })
     .when('/albums/:id', {
       templateUrl: '/templates/books-show.html',
-      controllerAs: 'booksShowCtrl',
-      controller: 'BooksShowController'
+      controllerAs: 'bookShowCtrl',
+      controller: 'BookShowController'
     })
 
     $locationProvider.html5Mode({
