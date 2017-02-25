@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app='booksApp'>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>📚</title>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="/public/styles/styles.css">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Arsenal|Rye" rel="stylesheet">
+
+    <!-- NG SCRIPTS -->
+    <script src='https://opensource.keycdn.com/angularjs/1.6.2/angular.min.js'></script>
+    <script src='/node_modules/angular-route/angular-route.js'></script>
+
+
+    <!-- APPLICATION SCRIPTS -->
+    <script src="/public/scripts/app.js"></script>
+    <script src="/public/scripts/controllers/BooksIndexController.js"></script>
+    <!-- <script src="/public/scripts/controllers/BooksShowController.js"></script> -->
+
+  </head>
+  <body>
+    <div class='jumbotron'>
+      <h1 class='text-center'>READ'EM B👀KS</h1>
+    </div>
+    <br>
+    <div class='container'>
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <div ng-view></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

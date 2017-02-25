@@ -1,0 +1,15 @@
+h1 {
+  font-family: 'Rye', cursive!important;
+  font-weight: lighter;
+  font-size: 45px;
+}
+
+.list-group-item {
+  font-family: 'Arsenal', sans-serif!important;
+  font-size: 18px;
+
+}
+
+h4 {
+  display: inline;
+}
