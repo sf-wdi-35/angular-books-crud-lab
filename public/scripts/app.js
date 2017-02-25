@@ -1,7 +1,7 @@
 
 
 angular
-  .module('tunely', ['ngRoute'])
+  .module('bookApp', ['ngRoute'])
   .config(config);
 
 config.$inject = ['$routeProvider', '$locationProvider'];
