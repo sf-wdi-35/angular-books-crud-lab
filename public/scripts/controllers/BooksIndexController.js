@@ -17,7 +17,20 @@ function BooksIndexController(   $http ) {
     console.log("here is the vm.books: ", vm.books);
   }, function errorCallback(response) {
     console.log("Error getting the data: ", response);
-  }); // end of GET request
+  }); // end of GET all request
+
+  vm.createBook = function() {
+    $http({
+      method: "POST",
+      url: "https://super-crud.herokuapp.com/books",
+      data: vm.newBook,
+    }).then(function successCallback(response) {
+      console.log("response.data ", response.data)
+      // vm.books.push(response.data);
+    }, function errorCallback(response) {
+      console.log("There was an error posting the new book!");
+    });
+  } // end of POST request
 
 }; // end of BooksIndexController
 
