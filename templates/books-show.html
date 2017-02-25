@@ -3,3 +3,34 @@
   <span class="title-list">{{ bsc.book.title }} </span> by
   <span class="author-list">{{ bsc.book.author }}</span>
 </p>
+
+<div class="col-md-10 col-md-offset-1">
+  <form class="form-horizontal" ng-submit="booksIndexCtrl.createBook()">
+    <fieldset>
+      <!-- Form Name -->
+      <legend>Add New Book</legend>
+      <!-- Text input -->
+      <div class="form-group">
+          <label class="col-md-4 control-label">Book Title</label>
+          <div class="col-md-4">
+            <input id="book-title-input" ng-model="bic.newBook.title" type="text" class="form-control input-md" required="">
+          </div>
+      </div>
+      <!-- Text input -->
+      <div class="form-group">
+          <label class="col-md-4 control-label">Book Author</label>
+          <div class="col-md-4">
+            <input id="book-author-input" ng-model="bic.newBook.author" type="text" class="form-control input-md" required="">
+          </div>
+      </div>
+      <!-- Button -->
+      <div class="form-group">
+        <label class="col-md-4 control-label">Save Book</label>
+        <div class="col-md-4">
+          <button class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+</div>
