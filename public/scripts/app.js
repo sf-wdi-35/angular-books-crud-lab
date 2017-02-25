@@ -1,5 +1,4 @@
-console.log('app.js sanity check');
-
+// app.js //
 angular
       .module('angularBooks', ['ngRoute'])
       .config(config);
@@ -14,12 +13,13 @@ function config($routeProvider, $locationProvider){
       templateUrl: '/views/templates/books.html',
       controller: 'BooksIndexController',
       controllerAs: 'bic'
-  })
+    })
     .when( '/books/:id', {
-      template: 'howdy',
+      templateUrl: '/views/templates/show.html',
       controller: 'BooksShowController',
       controllerAs: 'bsc'
-  });
+    });
+
   $locationProvider.html5Mode({
     enabled: true,
     requireBase: false

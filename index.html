@@ -2,13 +2,10 @@
 <html ng-app="angularBooks">
 
   <head>
-
-
-
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="public/styles/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Baloo|Inconsolata" rel="stylesheet">
+    <link rel="stylesheet" href="public/styles/styles.css">
 
     <!-- Vendor Scripts -->
     <script src="https://opensource.keycdn.com/angularjs/1.6.2/angular.min.js"></script>
@@ -24,14 +21,39 @@
   </head>
 
   <body>
-      <div class="container-fluid jumbotron">
-        <h1> Angular Books <span class="header-star"> ★ </span><span class="small"> read 'em and weep </span></h1>
-      </div>
+    <div class="container-fluid jumbotron">
+      <h1> Angular Books <span class="header-star"> ★ </span><span class="small"> read 'em and weep </span></h1>
+      <!-- Add Books Form
+      <div class="row container">
+        <form class="form-horizontal" ng-submit="bic.createBook()">
 
-      <!-- ANGULAR VIEWPOT -->
-      <div ng-view></div>
+          <input class="btn btn-lg btn-primary" type="button" name="submit" value="Submit">
+              <label class="control-label"> Title
+                <input class="form-control input-lg" type="text" name="title" value="" placeholder="book title">
+              </label>
 
-      <footer>© 2017 will kaspar</footer>
-      <br>
+              <label class="control-label"> Author
+                <input class="form-control input-lg" type="text" name="author" value="" placeholder="book author">
+              </label>
+
+              <label class="control-label"> Date Released
+                <input class="form-control input-lg" type="date" name="releaseDate" value="" placeholder="date released">
+              </label>
+              <hr>
+              <label class="custom-file"> <span class="upload-label">Upload an image for your new book:</span>
+                <input class="custom-file-input input-lg" type="file" name="image" value="choose image">
+                <span class="custom-file-control"></span>
+              </label>
+
+          </form>
+        </div> -->
+    </div> <!-- closes jumbotron -->
+
+
+    <!-- ANGULAR VIEWPOT -->
+    <div ng-view></div>
+
+
+    <footer>© 2017 will kaspar</footer>
   </body>
 </html>
