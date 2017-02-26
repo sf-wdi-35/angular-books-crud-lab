@@ -1,17 +1,64 @@
+body {
+  background-image: url(https://s-media-cache-ak0.pinimg.com/originals/25/62/a3/2562a3c4587e6ee34783bd1fa820ace9.jpg);
+  background-attachment: fixed;
+  font-family: 'Special Elite', cursive!important;
+  color: #000;
+
+}
+
+
 h1 {
-  font-family: 'Rye', cursive!important;
+  font-family: 'Special Elite', cursive!important;
   font-weight: lighter;
-  font-size: 45px;
+  text-decoration: none;
 }
 
 p {
-  font-family: 'Arsenal', sans-serif!important;
   font-size: 18px;
   display: block;
+  padding-top: 10px;
+  color: #000;
+  background-color: white;
+  width: 60%;
+  margin-top: 20px!important;
 
 }
 
-h2 {
-  font-family: 'Rye', cursive!important;
 
+.jumbotron {
+  background-color: transparent!important;
+  font-size: 70px!important;
+}
+
+.removeBtn-row { padding-top: 5px; }
+
+label, div.book-title {
+  font-size: 18px;
+}
+
+h2 {
+  font-size: 30px;
+  background-color: white;
+  width: 30%;
+  margin-left: 35%;
+}
+
+a.homepage {
+  text-decoration: none!important;
+  color: #000;
+}
+
+a.homepage:hover {
+  text-decoration: none!important;
+  color: #050e39;
+}
+
+.thumbnail {
+  line-height: 30px!important;
+  border: none!important;
+
+}
+
+img {
+  border: solid white 10px!important;
 }
