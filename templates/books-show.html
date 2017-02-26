@@ -1,11 +1,14 @@
 <div>BOOKS show FILE HERE!</div>
+
+
 <p>
   <span class="title-list">{{ bsc.book.title }} </span> by
   <span class="author-list">{{ bsc.book.author }}</span>
 </p>
 
+
 <div class="col-md-10 col-md-offset-1">
-  <form class="form-horizontal" ng-submit="booksIndexCtrl.createBook()">
+  <form class="form-horizontal" ng-submit="bic.createBook()">
     <fieldset>
       <!-- Form Name -->
       <legend>Add New Book</legend>
@@ -13,16 +16,33 @@
       <div class="form-group">
           <label class="col-md-4 control-label">Book Title</label>
           <div class="col-md-4">
-            <input id="book-title-input" ng-model="bic.newBook.title" type="text" class="form-control input-md" required="">
+            <input id="title" ng-model="bic.newBook.title" type="text" class="form-control input-md" required="">
           </div>
       </div>
       <!-- Text input -->
       <div class="form-group">
           <label class="col-md-4 control-label">Book Author</label>
           <div class="col-md-4">
-            <input id="book-author-input" ng-model="bic.newBook.author" type="text" class="form-control input-md" required="">
+            <input id="author" ng-model="bic.newBook.author" type="text" class="form-control input-md" required="">
           </div>
       </div>
+      <!-- Text input -->
+      <div class="form-group">
+          <label class="col-md-4 control-label">Release Date</label>
+          <div class="col-md-4">
+            <input id="releaseDate" ng-model="bic.newBook.releaseDate" type="text" class="form-control input-md" required="">
+          </div>
+      </div>
+      <!-- Text input -->
+      <div class="form-group">
+          <label class="col-md-4 control-label">Image</label>
+          <div class="col-md-4">
+            <input id="image" ng-model="bic.newBook.image" type="text" class="form-control input-md" required="">
+          </div>
+      </div>
+
+
+
       <!-- Button -->
       <div class="form-group">
         <label class="col-md-4 control-label">Save Book</label>
