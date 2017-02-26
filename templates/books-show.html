@@ -1,0 +1,21 @@
+<div class="jumbotron">
+  <div class="container">
+    <h1>{{booksShowCtrl.book.title}}</h1>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 col-md-offset-2">
+      <img class="showpage-image" ng-src="{{booksShowCtrl.book.image}}"></img>
+    </div>
+    <div class="col-md-3">
+      <p>{{booksShowCtrl.book.title}}<p>
+      <p>{{booksShowCtrl.book.author}}<p>
+      <p>{{booksShowCtrl.book.releaseDate}}<p>
+      <button class='btn btn-danger' ng-click="booksShowCtrl.deleteBook(booksShowCtrl.book)" aria-label="delete">
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</div>
