@@ -1,11 +1,12 @@
-<div ng-repeat="book in bookShowController.books">
+<div>
   <div class="col-md-10 col-md-offset-1">
 	<div class="panel panel-default">
 	  <div class="panel-body">
 
 		<div class='row'>
 		  <div class="col-md-3 col-xs-12 thumbnail">
-		    <img src="{{book.image}}">
+		    <img src="{{bookShowController.book.image}}">
+		    <input ng-show="editing" ng-model="bookShowController.book.image" type="text" class="form-control input-md">
 		  </div>
 
 			<div class="col-md-9 col-xs-12">
@@ -13,16 +14,19 @@
 				<li class="list-group-item">
 				  <h4 class='inline-header'>Book Title:</h4>
 				  <span>{{book.title}}</span>
+				  <input ng-show="editing" ng-model="bookShowController.book.title" type="text" class="form-control input-md">
 				</li>
 
 				<li class="list-group-item">
 				  <h4 class='inline-header'>Author Name:</h4>
 				  <span>{{book.author}}</span>
+				  <input ng-show="editing" ng-model="bookShowController.book.author" type="text" class="form-control input-md">
 				</li>
 
 				<li class="list-group-item">
 				  <h4 class='inline-header'>Released date:</h4>
 				  <span>{{book.releaseDate}}</span>
+				  <input ng-show="editing" ng-model="bookShowController.book.releaseDate" type="text" class="form-control input-md">
 				</li>
 			  </ul>
 			</div>
