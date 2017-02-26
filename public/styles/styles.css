@@ -37,6 +37,8 @@ hr {
 }
 
 .upload-label {
+  font-weight: lighter;
+  color: SeaShell;
   font-family: 'Baloo', sans-serif;
   font-size: 2em;
   text-shadow: 1px 1px 1px black;
@@ -51,6 +53,12 @@ hr {
 
 .book-info {
   margin-top: 25px;
+}
+
+.book-summary {
+  margin: 15px;
+  width: auto;
+  font-size: 0.85em;
 }
 
 .my-button-group {

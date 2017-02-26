@@ -1,5 +1,29 @@
 <div class="container">
 
+  <!-- Add Books Form -->
+  <div ng-show="editing" class="row container">
+    <form class="form-horizontal centered" ng-submit="bsc.updateBook(bsc.book)">
+
+        <input ng-submit="bsc.updateBook(bsc.book)" class="btn btn-success btn-lg" type="button" name="submit" value="Submit">
+          <label class="control-label"> Title
+            <input class="form-control input-lg" type="text" name="title" value="" placeholder="book title">
+          </label>
+
+          <label class="control-label"> Author
+            <input class="form-control input-lg" type="text" name="author" value="" placeholder="book author">
+          </label>
+
+          <label class="control-label"> Date Released
+            <input class="form-control input-lg" type="date" name="releaseDate" value="" placeholder="date released">
+          </label>
+          <hr>
+          <label class="custom-file"> <span class="upload-label">Upload an image for your new book:</span>
+            <input class="custom-file-input input-lg" type="file" name="image" value="choose image">
+            <span class="custom-file-control"></span>
+          </label>
+
+      </form>
+    </div>
 
 
   <div class="container">
@@ -14,10 +38,15 @@
         <p>Date Released: {{ bsc.book.releaseDate }}</p>
       </div>
       <hr>
+      <div class="book-summary">
+        <p ng-hide="editing">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <hr>
       <div class="my-button-group">
-        <button class="btn btn-md btn-success"><span class="glyphicon glyphicon-pencil"></span></button>
+        <button ng-hide="editing" ng-click="editing=true" class="btn btn-md btn-success"><span class="glyphicon glyphicon-pencil"></span></button>
         <button ng-click="bsc.deleteBook(bsc.book)" class="btn btn-md btn-danger" type="button" name="delete"><span class="glyphicon glyphicon-trash"></span></button>
       </div>
+
     </div>
   </div>
 
