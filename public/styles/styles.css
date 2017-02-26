@@ -1,0 +1,19 @@
+.homepage-image {
+  height: 200px;
+  width: 125px;
+}
+
+.showpage-image {
+  height: 600px;
+  width: 375px;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+img {
+  margin-bottom: 20px;
+}
