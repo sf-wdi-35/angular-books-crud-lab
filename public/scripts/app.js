@@ -1,3 +1,4 @@
+console.log("app.js is working!")
 angular
   .module('bookApp', ['ngRoute'])
   .config(config);
@@ -5,15 +6,16 @@ angular
 config.$inject = ['$routeProvider', '$locationProvider'];
 
 function config ($routeProvider, $locationProvider) {
+
   $routeProvider
     .when('/', {
       templateUrl: '/templates/books-index.html',
-      controllerAs: 'bookIndexCtrl',
+      controllerAs: 'bookIndexController',
       controller: 'BookIndexController'
     })
-    .when('/albums/:id', {
+    .when('/books/:id', {
       templateUrl: '/templates/books-show.html',
-      controllerAs: 'bookShowCtrl',
+      controllerAs: 'bookShowController',
       controller: 'BookShowController'
     })
 
