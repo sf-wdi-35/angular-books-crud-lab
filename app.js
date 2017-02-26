@@ -1,24 +1,21 @@
 angular
   .module('booksApp', ['ngRoute']) // ngRoute allows us to configure client-side routes in our app.
-  //.config(config) // for the app, use this dependency and configuration
-  .controller('BooksIndexController', BooksIndexController);
+  .config(config) // for the app, use this dependency and configuration
 
-  BooksIndexController.$inject = ['$http'];
+/* ROUTES */
 
-  function BooksIndexController ($http) {
-    var vm = this;
-    vm.newBook = {};
-    vm.books = [];
+  config.$inject = ['$routeProvider', '$locationProvider'];
 
-      $http({
-        method: 'GET',
-        url: 'https://super-crud.herokuapp.com/books'
-      }).then(function successCallback(response) {
-        vm.books = response.data.books;
-        console.log(response)
-      }, function errorCallback(response) {
-        console.log('There was an error getting the data', response);
-      });
+  function config(   $routeProvider,  $locationProvider   ) {
+    $routeProvider
+      .when('/', {
+        templateUrl: '/templates/books-index.html',
+        controllerAs: 'booksIndexCtrl',
+        controller: 'BooksIndexController'
+      })
 
-
+    $locationProvider.html5Mode({
+      enabled: true,
+      requireBase: false
+    });
   }

@@ -6,28 +6,29 @@ angular
 
   function BooksIndexController ($http) {
     var vm = this;
-    // vm.newBook = {
-    // };
-    //
-    // vm.books = [];
-
-    // books.push({
-    //   title: "Around the World in 80 Days",
-    //   author: "Jules Verne",
-    //   image: "https://cloud.githubusercontent.com/assets/7833470/10892118/865bee3e-8156-11e5-9634-cd7bcd3d6d4f.jpg",
-    //   releaseDate: "January 30, 1873",
-    // })
-
+    vm.newBook = {};
+    vm.books = [];
 
       $http({
         method: 'GET',
         url: 'https://super-crud.herokuapp.com/books'
-      }).then(function successCallback(response) {
+      }).then(function onBooksIndexSuccess(response) {
         console.log(response)
         vm.books = response.data.books;
-      }, function errorCallback(response) {
+      }, function onError(response) {
         console.log('There was an error getting the data', response);
       });
 
+      vm.createBook = function () {
+        $http({
+          method: 'POST',
+          url: 'https://super-crud.herokuapp.com/books',
+          data: vm.newBook,
+        }).then(function successCallback(response) {
+          vm.books.push(response.data);
+        }, function errorCallback(response) {
+          console.log('There was an error posting the data', response);
+        });
+      }
 
   }
