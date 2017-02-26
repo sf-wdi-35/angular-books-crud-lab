@@ -2,12 +2,10 @@ angular
   .module('bookApp')
   .controller('BookShowController', BookShowController);
 
-BookShowController.$inject = [ '$routeParams', '$http' ];
+BookShowController.$inject = [ '$http', '$routeParams', '$location' ];
 
-function BookShowController ($http, $routeParams) {
+function BookShowController ($http, $routeParams, $location) {
   var vm = this;
-
-  //get one book
   $http({
     method: 'GET',
     url: 'https://super-crud.herokuapp.com/books/' + $routeParams.id
