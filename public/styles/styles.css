@@ -52,18 +52,20 @@ h2 {
 a.homepage {
   text-decoration: none!important;
   color: #000;
+  transition-duration: $defaultDuration;
+  transition-property: transform;
 }
 
 a.homepage:hover {
   text-decoration: none!important;
-  color: #050e39;
+  transform: scale(1.1)!important;
 }
 
 .thumbnail {
-  line-height: 30px!important;
+  line-height: 20px!important;
   border: none!important;
   padding: 0px;
-  min-height: 240px;
+  min-height: 250px;
   box-shadow: 4px 3px 6px rgba(0, 0, 0, 0.26);
 }
 
@@ -81,12 +83,15 @@ img.book-img {
 }
 
 .grid-div {
-  padding-right: 0px!important;
+  padding-right: 4px!important;
+  padding-left: 8px!important;
 }
 
-.grid-div:hover {
-
+.thumbnail:hover {
+  background-color: transparent;
+  transition: all 500ms ease;
 }
+
 
 fieldset {
   margin-top: 10%;
