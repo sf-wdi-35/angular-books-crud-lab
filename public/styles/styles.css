@@ -9,8 +9,12 @@ body {
 
 h1 {
   font-family: 'Special Elite', cursive!important;
-  font-weight: lighter;
   text-decoration: none;
+  background-color: white!important;
+  width: 33%!important;
+  box-shadow: 4px 3px 6px rgba(0, 0, 0, 0.26)!important;
+  margin-left: 34%!important;
+  color: #000!important;
 }
 
 p {
@@ -19,8 +23,9 @@ p {
   padding-top: 10px;
   color: #000;
   background-color: white;
-  width: 60%;
+  width: 80%;
   margin-top: 20px!important;
+  margin-left: 11%!important;
 
 }
 
@@ -30,7 +35,7 @@ p {
   font-size: 70px!important;
 }
 
-.removeBtn-row { padding-top: 5px; }
+.removeBtn-div { padding-top: 5px; }
 
 label, div.book-title {
   font-size: 18px;
@@ -39,8 +44,9 @@ label, div.book-title {
 h2 {
   font-size: 30px;
   background-color: white;
-  width: 30%;
-  margin-left: 35%;
+  width: 45%;
+  margin-left: 28%;
+  margin-top: -5%;
 }
 
 a.homepage {
@@ -56,9 +62,43 @@ a.homepage:hover {
 .thumbnail {
   line-height: 30px!important;
   border: none!important;
-
+  padding: 0px;
+  min-height: 240px;
+  box-shadow: 4px 3px 6px rgba(0, 0, 0, 0.26);
 }
 
 img {
   border: solid white 10px!important;
+}
+
+img.book-img {
+  max-height: 215px;
+  max-width: 90%;
+}
+
+.add-shadow {
+  box-shadow: 4px 3px 6px rgba(0, 0, 0, 0.26);
+}
+
+.grid-div {
+  padding-right: 0px!important;
+}
+
+.grid-div:hover {
+
+}
+
+fieldset {
+  margin-top: 10%;
+}
+
+.addBtn-div {
+  margin-left: 105%;
+  padding-right: 0px;
+  padding-bottom: 10px;
+}
+
+.form-control {
+  text-align: center;
+  font-size: 16px!important;
 }

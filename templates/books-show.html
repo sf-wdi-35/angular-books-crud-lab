@@ -1,24 +1,24 @@
 <div class="container" ng-controller="BooksShowController as booksShowCtrl">
-  <h2 class='text-center'>{{booksShowCtrl.book.title}}</h2>
+  <h2 class='text-center add-shadow'>{{booksShowCtrl.book.title}}</h2>
 
   <br>
   <div class="row">
   	<div class="col-xs-4 col-md-offset-4">
-  		<img ng-src="{{booksShowCtrl.book.image}}" class="img-responsive">
+  		<img ng-src="{{booksShowCtrl.book.image}}" class="img-responsive add-shadow">
   	</div>
 
-  	<div class="col-xs-6">
-      <p class='text-center'>Author: {{booksShowCtrl.book.author}}</p>
-  		<p class='text-center'>Release Date: {{booksShowCtrl.book.releaseDate}}</p>
+  	<div class="col-xs-4 col-md-offset-4">
+      <p class='text-center add-shadow'>Author: {{booksShowCtrl.book.author}}</p>
+  		<p class='text-center add-shadow'>Release Date: {{booksShowCtrl.book.releaseDate}}</p>
     </div>
 
     <div class='row'>
-      <button class='btn btn-default' ng-click="editing=!editing">
+      <button class='btn btn-default add-shadow' ng-click="editing=!editing">
         <span class='glyphicon glyphicon-pencil' aria-hidden='true'><span>
       </button>
 
-      <div class='row removeBtn-row'>
-        <button class='btn btn-danger' ng-hide="editing" ng-click="booksShowCtrl.deleteBook(book)">
+      <div class='row removeBtn-div'>
+        <button class='btn btn-danger add-shadow' ng-hide="editing" ng-click="booksShowCtrl.deleteBook(book)">
           <span class='glyphicon glyphicon-remove' aria-hidden='true'></span>
         </button>
       </div>

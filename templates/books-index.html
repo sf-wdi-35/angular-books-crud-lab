@@ -3,9 +3,9 @@
 
 
   <div class="row">
-    <div class="col-md-3 col-xs-6" ng-repeat="book in booksIndexCtrl.books | orderBy: 'title' | filter: searchText">
+    <div class="col-md-3 col-sm-4 col-xs-6 grid-div" ng-repeat="book in booksIndexCtrl.books | orderBy: 'title' | filter: searchText">
       <div class="thumbnail">
-        <a href='/books/{{book._id}}'><img ng-src="{{book.image}}" alt="book image"/></a>
+        <a href='/books/{{book._id}}'><img class='img-responsive book-img' ng-src="{{book.image}}" alt="book image"/></a>
           <div class="book-title text-center">
             {{book.title}}
         </div>
@@ -13,54 +13,64 @@
     </div>
   </div>
 
+<div class='row'>
+  <div class='col-md-1 col-sm-1 col-md-offset-12 addBtn-div'>
+    <button ng-click="adding=!adding" class='btn btn-default add-shadow'>
+      <span class='glyphicon glyphicon-plus' aria-hidden='true'></span>
+    </button>
+  </div>
+</div>
 
+  <!-- add book form -->
   <div class='row'>
     <div class='col-md-9 col-md-offset-2'>
-      <form class="form-horizontal" ng-submit="booksIndexCtrl.createBook()">
-        <fieldset>
+      <div ng-show='adding'>
+        <form ng-show="adding" class="form-horizontal" ng-submit="booksIndexCtrl.createBook()">
+          <fieldset>
 
-          <!-- Text input-->
-          <div class="form-group">
-            <label class="col-md-4 control-label">Title</label>
-            <div class="col-md-4">
-            <input id="title" ng-model="booksIndexCtrl.newBook.title" type="text" class="form-control input-md" required="">
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label">Title</label>
+              <div class="col-md-4">
+              <input id="title" ng-model="booksIndexCtrl.newBook.title" type="text" class="form-control input-md" required="">
+              </div>
             </div>
-          </div>
 
-          <!-- Text input-->
-          <div class="form-group">
-            <label class="col-md-4 control-label">Author</label>
-            <div class="col-md-4">
-            <input ng-model="booksIndexCtrl.newBook.author" type="text" class="form-control input-md">
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label">Author</label>
+              <div class="col-md-4">
+              <input ng-model="booksIndexCtrl.newBook.author" type="text" class="form-control input-md">
+              </div>
             </div>
-          </div>
 
-          <!-- Text input-->
-          <div class="form-group">
-            <label class="col-md-4 control-label">Release Date</label>
-            <div class="col-md-4">
-            <input ng-model="booksIndexCtrl.newBook.releaseDate" type="text" class="form-control input-md">
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label">Release Date</label>
+              <div class="col-md-4">
+              <input ng-model="booksIndexCtrl.newBook.releaseDate" type="text" class="form-control input-md">
+              </div>
             </div>
-          </div>
 
-          <!-- Text input-->
-          <div class="form-group">
-            <label class="col-md-4 control-label">Image URL</label>
-            <div class="col-md-4">
-            <input ng-model="booksIndexCtrl.newBook.image" type="text" class="form-control input-md">
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label">Image URL</label>
+              <div class="col-md-4">
+              <input ng-model="booksIndexCtrl.newBook.image" type="text" class="form-control input-md">
+              </div>
             </div>
-          </div>
 
 
-          <!-- Button -->
-          <div class="form-group">
-            <label class="col-md-4 control-label">📘</label>
-            <div class="col-md-4">
-              <button class="btn btn-success">SAVE</button>
+            <!-- Button -->
+            <div class="form-group">
+              <label class="col-md-4 control-label">📘</label>
+              <div class="col-md-4">
+                <button class="btn btn-success">SAVE</button>
+              </div>
             </div>
-          </div>
-        </fieldset>
-      </form>
+          </fieldset>
+        </form>
+      </div>
     </div>
   </div>
 
