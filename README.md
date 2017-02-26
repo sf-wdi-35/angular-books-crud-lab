@@ -21,4 +21,4 @@
 
 ##### DEMO
 
-![](http://recordit.co/EETKiZl0vo)
+![](https://media.giphy.com/media/wZKCvLDJgAuVW/giphy.gif)
