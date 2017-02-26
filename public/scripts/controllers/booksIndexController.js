@@ -17,9 +17,7 @@ function BooksIndexController($http){
     method: 'GET',
     url: 'https://super-crud.herokuapp.com/books'
   }).then(function onSuccess(res){
-    console.log('response data: ', res);
-    vm.data = res.data;
-    console.log('ajax all books: ', vm.data);
+    vm.data = res.data;  
   }, function onError(res){
     console.log('failjax: ', res);
   });

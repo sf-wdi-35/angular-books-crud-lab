@@ -12,7 +12,7 @@ img {
   margin: 20px;
 }
 
-h1 {
+h1, h2 {
   font-family: 'Baloo', sans-serif;
   text-shadow: 1px 1px 1px black;
 }
@@ -33,7 +33,7 @@ footer {
 }
 
 hr {
-  width: 60%;
+  max-width: 60%;
 }
 
 .upload-label {
@@ -55,7 +55,7 @@ hr {
 
 .my-button-group {
   margin-bottom: 10px;
-  margin-right: 50%;
+  margin-right: 30%;
   float: right;
 }
 

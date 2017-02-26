@@ -1,3 +1,24 @@
 <div class="container">
-  <h1>ima individual book page</h1>
+
+
+
+  <div class="container">
+    <div class="book-panel clearfix">
+
+
+
+      <img src="{{ bsc.book.image }}" alt="book pic">
+      <div class="book-info">
+        <h2><a ng-href="/">{{ bsc.book.title }}</a></h2>
+        <p>Author: {{ bsc.book.author }}</p>
+        <p>Date Released: {{ bsc.book.releaseDate }}</p>
+      </div>
+      <hr>
+      <div class="my-button-group">
+        <button class="btn btn-md btn-success"><span class="glyphicon glyphicon-pencil"></span></button>
+        <button ng-click="bsc.deleteBook(bsc.book)" class="btn btn-md btn-danger" type="button" name="delete"><span class="glyphicon glyphicon-trash"></span></button>
+      </div>
+    </div>
+  </div>
+
 </div>

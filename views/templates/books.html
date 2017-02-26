@@ -7,15 +7,11 @@
     <div class="book-panel clearfix">
       <img src="{{ book.image }}" alt="book pic">
       <div class="book-info">
-        <p>Title: <a ng-href="books/{{book._id}}">{{ book.title }}</a></p>
+        <h2><a ng-href="books/{{book._id}}">{{ book.title }}</a></h2>
         <p>Author: {{ book.author }}</p>
         <p>Date Released: {{ book.releaseDate }}</p>
       </div>
-      <hr>
-      <div class="my-button-group">
-        <button class="btn btn-md btn-success" type="button" name="update">edit</button>
-        <button class="btn btn-md btn-danger" type="button" name="delete">delete</button>
-      </div>
+      <hr>    
     </div>
   </div>
 
