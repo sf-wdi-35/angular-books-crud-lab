@@ -32,7 +32,7 @@ function BooksShowController($http, $routeParams, $location) {
      }, function onError(response){
      });
   }
- 
+
   vm.deleteBook = function (bookToDelete) {
     $http({
       method: 'DELETE',
