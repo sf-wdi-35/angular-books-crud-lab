@@ -9,8 +9,13 @@ angular.module("bookApp", ["ngRoute"])
       .when("/", {
         templateUrl: "/templates/books-index.html",
         controller: "BooksIndexController",
-        controllerAs: "booksIndexCtrl",
+        controllerAs: "booksIndexCtrl"
       })
+      .when("/books/:id") {
+        templateUrl: "/templates/books-show.html",
+        controller: "BooksShowController",
+        controllerAs: "booksShowCtrl"
+      }
     .otherwise({
       redirectTo: "/"
     });

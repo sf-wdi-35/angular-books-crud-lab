@@ -1,0 +1,20 @@
+<div class="container">
+  <h3>Book title</h3>
+  <div class="row">
+    <div class="col-sm-6">
+      <img src="#" class="image-responsive">
+    </div>
+    <div class="col-sm-6">
+      <label ng-click="editing = !editing"><h4 class="bold">Author:</h4><h4 ng-class="editing-label" class="underline">{{thing}}</h4></label>
+      <input ng-show="editing">
+      <label ng-click="editing = !editing"><h4 class="bold">Release Date:</h4><h4 ng-class="editing-label" class="underline">{{thing}}</h4></label>
+      <input ng-show="editing">
+      <p>
+        Click on an item to edit.
+      </p>
+      <div class="buttons">
+        <a href="" ng-click="">Save changes</a>
+      </div>
+    </div>
+  </div>
+</div>
