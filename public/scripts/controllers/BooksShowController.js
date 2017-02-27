@@ -32,8 +32,14 @@ angular
       $http({
         method: 'PUT',
         url: 'https://super-crud.herokuapp.com/books/' + $routeParams.id,
-        data: book
+        data: {
+          title: book.title,
+          author: book.author,
+          image: book.image,
+          releaseDate: book.releaseDate
+        }
       }).then(function onSuccess(res){
+        console.log(res.data);
         vm.book=res.data
       }, function onError(err){
         console.log("edit book" + err)
