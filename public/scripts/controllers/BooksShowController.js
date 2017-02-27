@@ -27,12 +27,15 @@ function BooksShowController (  $http,   $routeParams,   $location  ) {
     });
   }
 
+  //edit book
   vm.editBook = function (book) {
     $http({
       method: 'PUT',
       url: 'https://super-crud.herokuapp.com/books/' + bookId,
       data: book
     }).then(function successCallback(json) {
+      //redirects back to homepage
+      $location.path('/');
     }, function errorCallback(response) {
       console.log('error: ', response);
     });

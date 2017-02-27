@@ -1,11 +1,9 @@
-<div class="container" ng-controller="BooksIndexController as booksIndexCtrl">
+<div class="container">
   <br>
-
-
   <div class="row">
-    <div class="col-md-3 col-sm-4 col-xs-6 grid-div" ng-repeat="book in booksIndexCtrl.books | orderBy: 'title' | filter: searchText">
+    <div class="col-md-3 col-sm-4 col-xs-6 grid-div" ng-repeat="book in booksIndexCtrl.books | orderBy: 'title'">
       <div class="thumbnail">
-        <a href='/books/{{book._id}}'><img class='img-responsive book-img' ng-src="{{book.image}}" alt="book image"/></a>
+        <a ng-href='/books/{{book._id}}'><img class='img-responsive book-img' ng-src="{{book.image}}" alt="book image"/></a>
           <div class="book-title text-center">
             {{book.title}}
         </div>
@@ -68,10 +66,10 @@
                 <button class="btn btn-success">SAVE</button>
               </div>
             </div>
+            
           </fieldset>
         </form>
       </div>
     </div>
   </div>
-
 </div>
