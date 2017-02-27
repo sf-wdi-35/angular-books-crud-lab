@@ -1,0 +1,109 @@
+body {
+  background-image: url(https://s-media-cache-ak0.pinimg.com/originals/25/62/a3/2562a3c4587e6ee34783bd1fa820ace9.jpg);
+  background-attachment: fixed;
+  font-family: 'Special Elite', cursive!important;
+  color: #000;
+
+}
+
+
+h1 {
+  font-family: 'Special Elite', cursive!important;
+  text-decoration: none;
+  background-color: white!important;
+  width: 33%!important;
+  box-shadow: 4px 3px 6px rgba(0, 0, 0, 0.26)!important;
+  margin-left: 34%!important;
+  color: #000!important;
+}
+
+p {
+  font-size: 18px;
+  display: block;
+  padding-top: 10px;
+  color: #000;
+  background-color: white;
+  width: 80%;
+  margin-top: 20px!important;
+  margin-left: 11%!important;
+
+}
+
+
+.jumbotron {
+  background-color: transparent!important;
+  font-size: 70px!important;
+}
+
+.removeBtn-div { padding-top: 5px; }
+
+label, div.book-title {
+  font-size: 18px;
+}
+
+h2 {
+  font-size: 30px;
+  background-color: white;
+  width: 45%;
+  margin-left: 28%;
+  margin-top: -5%;
+}
+
+a.homepage {
+  text-decoration: none!important;
+  color: #000;
+  transition-duration: $defaultDuration;
+  transition-property: transform;
+}
+
+a.homepage:hover {
+  text-decoration: none!important;
+  transform: scale(1.1)!important;
+}
+
+.thumbnail {
+  line-height: 20px!important;
+  border: none!important;
+  padding: 0px;
+  min-height: 250px;
+  box-shadow: 4px 3px 6px rgba(0, 0, 0, 0.26);
+}
+
+img {
+  border: solid white 10px!important;
+}
+
+img.book-img {
+  max-height: 215px;
+  max-width: 90%;
+}
+
+.add-shadow {
+  box-shadow: 4px 3px 6px rgba(0, 0, 0, 0.26);
+}
+
+.grid-div {
+  padding-right: 4px!important;
+  padding-left: 8px!important;
+}
+
+.thumbnail:hover {
+  background-color: transparent;
+  transition: all 500ms ease;
+}
+
+
+fieldset {
+  margin-top: 10%;
+}
+
+.addBtn-div {
+  margin-left: 105%;
+  padding-right: 0px;
+  padding-bottom: 10px;
+}
+
+.form-control {
+  text-align: center;
+  font-size: 16px!important;
+}
