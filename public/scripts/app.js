@@ -6,15 +6,18 @@ config.$inject = ['$routeProvider', '$locationProvider'];
 function config(   $routeProvider,  $locationProvider   ) {
   $routeProvider
     .when('/', {
-      templateUrl: '/templates/books-index.html',
-      controllerAs: 'bic',
-      controller: 'BooksIndexController'
+      templateUrl: 'templates/books-index.html',
+      controller: 'BooksIndexController',
+      controllerAs: 'bic'
     })
-    // .when('/books/:id', {
-    //   templateUrl: '/templates/books-show.html',
-    //   controllerAs: 'bsc',
-    //   controller: 'BooksShowController'
-    // })
+    .when('/books/:id', {
+      templateUrl: '../templates/books-show.html',
+      controller: 'BooksShowController',
+      controllerAs: 'bsc'
+    })
+    .otherwise({
+      redirectTo: '/'
+    });
 
   $locationProvider.html5Mode({
     enabled: true,
