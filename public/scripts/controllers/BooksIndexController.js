@@ -6,8 +6,6 @@ angular
 
   function BooksIndexController ($http) {
     var vm = this;
-    vm.newBook = {};
-    vm.books = [];
 
       $http({
         method: 'GET',
