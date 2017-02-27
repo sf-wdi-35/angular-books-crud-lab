@@ -7,21 +7,16 @@ BooksShowController.$inject=['$http', '$routeParams', '$location'];
 function BooksShowController($http, $routeParams, $location) {
   var vm = this;
   var bookId = $routeParams.id
+  vm.books = [];
   $http({
     method: 'GET',
     url: 'https://super-crud.herokuapp.com/books/'+ bookId
-  }).then(onBookShowSuccess, onError);
-
-  function onBookShowSuccess(response) {
-    console.log('book data:', bookId, ':', response.data);
+  }).then(function onBookShowSuccess(response) {
     vm.book = response.data;
-  }
-  function onError(response){
-   console.log('error: ', response);
-  }
+  }, function onError(response){
+ });
 
  vm.updateBook = function(bookToUpdate) {
-     console.log('updating book: ', bookToUpdate);
      $http({
        method: 'PUT',
        url: 'https://super-crud.herokuapp.com/books/'+bookToUpdate._id ,
@@ -31,16 +26,23 @@ function BooksShowController($http, $routeParams, $location) {
          image: bookToUpdate.image,
          releaseDate: bookToUpdate.releaseDate
        }
-     }).then(onBookUpdateSuccess, onError);
+     }).then(function onBookUpdateSuccess(response){
+       vm.book = response.data; // save the updated book to the DB
+       $location.path('/'); // redirect to homepage after book is saved
+     }, function onError(response){
+     });
+  }
 
-     function onBookUpdateSuccess(response){
-       console.log('updated book:', bookId, ':', response.data);
-       vm.book = response.data;
-       $location.path('/');
-     }
+  vm.deleteBook = function (bookToDelete) {
+    $http({
+      method: 'DELETE',
+      url: 'https://super-crud.herokuapp.com/books/'+ bookToDelete._id,
+    }).then(function onDeleteBookSuccess(response) {
+      var index = vm.books.indexOf(bookToDelete);
+      vm.books.splice(index, 1); // remove book from DB
+      $location.path('/'); //redirect to homepage after book is removed
+    }, function onError(response) {
+    });
+  }
 
-     function onError(response){
-       console.log('error:', response);
-     }
-   };
- }
+}

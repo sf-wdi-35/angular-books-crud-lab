@@ -7,7 +7,7 @@
            <div class="panel-body">
              <div class='row'>
                <div class="col-md-3 col-xs-12 thumbnail">
-                 <img ng-src="{{booksShowCtrl.book.image}}" alt="book cover image" class="img-responsive">
+                 <img ng-src="{{booksShowCtrl.book.image}}" alt="book cover image">
                </div>
 
                <div class="col-md-9 col-xs-12">
@@ -32,6 +32,7 @@
                 </ul>
 
                <a href="#" ng-click="editForm=!editForm" class="btn btn-default"> Edit <span class="glyphicon glyphicon-pencil"></span></a>&nbsp;
+               <a href="#" ng-click="booksShowCtrl.deleteBook(booksShowCtrl.book)" class="btn btn-danger"> Delete <span class="glyphicon glyphicon-trash"></span></a>&nbsp;
 
                  <div ng-show="editForm">
                    <br>
@@ -48,7 +49,7 @@
                      <div class="form-group">
                        <input type="text" ng-model="booksShowCtrl.book.releaseDate" class="form-control" placeholder="Release Date">
                      </div>
-                     <input type="submit" value="Update Book" class="btn btn-default">
+                     <input type="submit" value="Update Book" class="btn btn-info">
                    </form>
                  </div>
 
