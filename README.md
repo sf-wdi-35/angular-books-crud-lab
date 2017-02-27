@@ -1,6 +1,5 @@
 # Bibliothèque
-An Angular digital cataologue app for your books:
-'https://ychoy.github.io/bibliotheque'
+An Angular digital cataologue app for your books 
 
 ##Technologies
 * Angular
