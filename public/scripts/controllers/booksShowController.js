@@ -29,5 +29,16 @@ function BooksShowController (  $http, 	 $routeParams,	 $location ) {
 		})
 	}
 
+	vm.editBook = function(book) {
+		$http({
+			method: 'PUT',
+			url: 'https://super-crud.herokuapp.com/books/' + bookId,
+			data: book
+		}).then(function editSuccess(response){
+			vm.book = response.data;
+		}, function editError(response){
+			console.log('There was an error', error);
+		})
+	}
 
 }
