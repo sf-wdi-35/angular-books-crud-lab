@@ -8,7 +8,7 @@
   </div>
 
   <!-- Displays All Books -->
-  <div class="container" ng-repeat="book in bic.data.books | filter: searchText">
+  <div class="container" ng-repeat="book in bic.data.books | filter: searchText as results">
     <div class="book-panel clearfix">
       <img ng-src="{{ book.image }}" alt="book pic">
       <div class="book-info">
