@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="booksApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- icon -->
+    <link rel="icon" href="public/images/favicon.ico" type="image/x-icon" />
+
+    <title>BookMe!</title>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="public/styles/styles.css">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans" rel="stylesheet">
+
+    <!-- VENDOR SCRIPTS -->
+    <script src="https://code.angularjs.org/1.6.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-route.js"></script>
+
+    <!-- APPLICATION SCRIPTS -->
+    <script src="public/scripts/app.js"></script>
+    <script src="controllers/BooksIndexController.js"></script>
+    <script src="controllers/BooksShowController.js"></script>
+
+  </head>
+  <body>
+    <div class="jumbotron">
+      <div class="container">
+        <a href="/"><h1 class="text-right">BookMe!</h1></a>
+      </div>
+    </div>
+
+    <div ng-view>
+
+    </div>
+
+  </body>
+
+</html>

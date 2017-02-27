@@ -1,0 +1,27 @@
+<div class="container">
+  <hr>
+    <div class="clearfix">
+      <div class="col-md-6">
+        <h3><b>Title:</b> <span ng-hide="editing"> {{ booksShowCtrl.book.title }}</span></h3>
+        <input ng-show="editing" ng-model="booksShowCtrl.editedBook.title" type="text" class="form-control input-sm">
+        <h3><b>Author:</b><span ng-hide="editing"> {{ booksShowCtrl.book.author }} </span></h3>
+        <input ng-show="editing" ng-model="booksShowCtrl.editedBook.author" type="text" class="form-control input-sm">
+        <h3><b>Release Date:</b><span> {{ booksShowCtrl.book.releaseDate }}</span></h3>
+        <input ng-show="editing" ng-model="booksShowCtrl.editedBook.releaseDate" type="text" class="form-control input-sm">
+        <h3 ng-show="editing" ><b>Image:</b></h3>
+        <input ng-show="editing" ng-model="booksShowCtrl.editedBook.image" type="text" class="form-control input-sm">
+
+        <br>
+        <button class='btn btn-info' ng-hide="editing" ng-click="booksShowCtrl.editing(); editing = true">Edit book</button>
+        <button class='btn btn-success' ng-show="editing" ng-click="booksShowCtrl.editBook(book); editing = false">Save Changes</button>
+        <button class="btn btn-danger" ng-hide="editing" type="button" ng-click="booksShowCtrl.deleteBook(book)" name="delete">Delete book</button>
+        <button type="button" ng-show="editing" class="btn btn-danger" ng-click="editing=false">Cancel</button>
+        <br>
+      </div>
+      <div class="col-md-6">
+        <img class="pull-right img-rounded" ng-src="{{ booksShowCtrl.book.image }}">
+      </div>
+    </div>
+    <hr>
+  </div>
+</div>

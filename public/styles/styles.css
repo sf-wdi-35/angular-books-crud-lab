@@ -1,0 +1,47 @@
+h1 {
+  font-family: 'Lora', serif;
+  animation: type 4s steps(60, end);
+  color: black;
+}
+
+@keyframes type{
+  from { width: 0; }
+}
+
+.jumbotron {
+  background-image: url("../images/header.jpg");
+  background-position: center;
+  border-bottom: black solid 2px;
+}
+
+body {
+  background-color: #8CD8DB;
+  font-family: 'Open Sans', sans-serif;
+}
+
+hr {
+  color: black;
+  border-color: black;
+}
+
+a {
+  color: #704418;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #A5703A;
+}
+
+a:visited, a:focus {
+  text-decoration: none;
+  color: #704418;
+}
+
+img {
+  height: 300px;
+}
+
+.individual {
+  height: 500px;
+}
