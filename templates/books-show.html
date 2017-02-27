@@ -1,3 +1,9 @@
+<ol class="breadcrumb">
+  <li><a href="/">Home</a></li>
+  <li class="active">{{ booksShowCtrl.book.title }}</li>
+</ol>
+
+
 <div class="col-xs-6 col-md-4">
 	<img ng-hide="editing" ng-src="{{ booksShowCtrl.book.image }}" alt="" class="img-responsive">
 	<input ng-show="editing" type="text" class="form-control" ng-model="booksShowCtrl.book.image" >
