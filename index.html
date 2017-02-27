@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bookApp">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Book App</title>
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+	
+	<link rel="stylesheet" href="/public/styles/main.css">
+
+	<!-- Scripts -->
+	<script src="/bower_components/angular/angular.min.js"></script>
+	<script src="/bower_components/angular-route/angular-route.min.js"></script>
+	<script src="/public/scripts/app.js"></script>
+	<script src="/public/scripts/controllers/booksIndexController.js"></script>
+	<script src="/public/scripts/controllers/booksShowController.js"></script>
+</head>
+<body>
+	<header class="jumbotron">
+		<div class="container">
+			<h1>BookApp</h1>
+		</div>
+	</header>
+	
+	
+	<div class="container" ng-view>
+		
+	</div>
+	
+</body>
+</html>
