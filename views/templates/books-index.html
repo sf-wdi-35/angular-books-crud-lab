@@ -1,0 +1,87 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+
+      <form class="form-horizontal" ng-submit="booksIndexCtrl.createBook()">
+        <fieldset>
+
+          <!-- Form Name -->
+          <legend>Add New Book</legend>
+
+          <!-- Text input for book title-->
+          <div class="form-group">
+            <label class="col-md-4 control-label">Book Title</label>
+            <div class="col-md-4">
+            <input id="title" ng-model="booksIndexCtrl.newBook.title" type="text" class="form-control input-md" required="">
+            </div>
+          </div>
+
+          <!-- Text input book author-->
+          <div class="form-group">
+            <label class="col-md-4 control-label">Author Name</label>
+            <div class="col-md-4">
+            <input ng-model="booksIndexCtrl.newBook.author" type="text" class="form-control input-md">
+            </div>
+          </div>
+
+          <!-- Text input for image url-->
+          <div class="form-group">
+            <label class="col-md-4 control-label">Image Url:</label>
+            <div class="col-md-4">
+            <input ng-model="booksIndexCtrl.newBook.image" type="text" class="form-control input-md">
+            </div>
+          </div>
+
+          <!-- Text Input for release date-->
+          <div class="form-group">
+            <label class="col-md-4 control-label">Release Date:</label>
+            <div class="col-md-4">
+            <input type="text" name="releaseDate" ng-model="booksIndexCtrl.newBook.releaseDate" class="form-control input-md">
+            </div>
+          </div>
+
+          <!-- Button -->
+          <div class="form-group">
+            <label class="col-md-4 control-label">Save Book</label>
+            <div class="col-md-4">
+              <button class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+
+    </div>
+  </div>
+</div>
+<div ng-repeat="book in booksIndexCtrl.books">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-md-3 thumbnail">
+                <img src={{book.image}}>
+              </div>
+
+              <div class="col-md-9">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <h4 class="inline-header">Book Title:</h4>
+                    <span><a ng-href="books/{{book._id}}">{{book.title}}</a></span>
+                  </li>
+
+                  <li class="list-group-item">
+                    <h4 class="inline-header">Book Author:</h4>
+                    <span>{{book.author}}</span>
+                  </li>
+
+                  <li class="list-group-item">
+                    <h4 class="inline-header">Book Release Date:</h4>
+                    <span>{{book.releaseDate}}</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
