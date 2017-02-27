@@ -6,12 +6,16 @@ BooksShowController.$inject = ['$http', '$routeParams', '$location'];
 function BooksShowController (  $http, 	 $routeParams,	 $location ) {
 	var vm = this;
 	var bookId = $routeParams.id;
+	vm.book;
+	vm.bookCopy;
 
 	$http({
 		method: 'GET',
 		url: 'https://super-crud.herokuapp.com/books/' + bookId,
 	}).then(function successCallback(response){
 		vm.book = response.data;
+		vm.bookCopy = angular.copy(vm.book);
+
 	}, function errorCallback(error) {
 		console.log('Error: ', error);
 	})
@@ -23,11 +27,11 @@ function BooksShowController (  $http, 	 $routeParams,	 $location ) {
 		}).then(function deleteSuccessCallback(response){
 			//redirect to homepage
 			$location.path('/')
-			// console.log(response);
 		}, function deleteErrorCallback(error){
 			console.log('Error: ', error);
 		})
 	}
+
 
 	vm.editBook = function(book) {
 		$http({
@@ -36,7 +40,8 @@ function BooksShowController (  $http, 	 $routeParams,	 $location ) {
 			data: book
 		}).then(function editSuccess(response){
 			vm.book = response.data;
-		}, function editError(response){
+			$location.path('/');
+		}, function editError(error){
 			console.log('There was an error', error);
 		})
 	}

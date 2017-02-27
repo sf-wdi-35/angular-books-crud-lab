@@ -6,24 +6,29 @@
 
 <div class="col-xs-6 col-md-4">
 	<img ng-hide="editing" ng-src="{{ booksShowCtrl.book.image }}" alt="" class="img-responsive">
-	<input ng-show="editing" type="text" class="form-control" ng-model="booksShowCtrl.book.image" >
+	<input ng-show="editing" type="text" class="form-control" ng-model="booksShowCtrl.bookCopy.image" >
 </div>
 <div class="col-xs-6 col-md-8">
 	<h3 ng-hide="editing">{{ booksShowCtrl.book.title }}</h3>
-	<input ng-show="editing" type="text" class="form-control" ng-model="booksShowCtrl.book.title">
+	<input ng-show="editing" type="text" class="form-control" ng-model="booksShowCtrl.bookCopy.title">
 	
 	<h4 ng-hide="editing">{{booksShowCtrl.book.author}}</h4>
-	<input ng-show="editing" type="text" class="form-control" ng-model="booksShowCtrl.book.author">
+	<input ng-show="editing" type="text" class="form-control" ng-model="booksShowCtrl.bookCopy.author">
 
 	<p ng-hide="editing">{{booksShowCtrl.book.releaseDate}}</p>
-	<input ng-show="editing" type="text" class="form-control" ng-model="booksShowCtrl.book.releaseDate">
+	<input ng-show="editing" type="text" class="form-control" ng-model="booksShowCtrl.bookCopy.releaseDate">
+	
+	<button class="btn btn-danger" ng-click="booksShowCtrl.deleteBook(booksShowCtrl.book)">
+		Delete
+	</button>
 	
 	<button class="btn btn-info" ng-hide="editing" ng-click="editing = true">
 	Edit
 	</button>
-	<button class="btn btn-success" ng-show="editing" ng-click="booksShowCtrl.editBook(booksShowCtrl.book); editing = false">Save Changes</button>
+	
+	<button class="btn btn-success" ng-show="editing" ng-click="booksShowCtrl.editBook(booksShowCtrl.bookCopy); editing = false">Save Changes</button>
 
-	<button class="btn btn-danger" ng-click="booksShowCtrl.deleteBook(booksShowCtrl.book)">
-		Delete
-	</button>
+	<button class="btn btn-warning" ng-show="editing" ng-click="editing = false">Cancel</button>
+
+	
 </div>
