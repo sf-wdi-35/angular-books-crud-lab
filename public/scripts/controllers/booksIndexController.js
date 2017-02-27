@@ -3,7 +3,7 @@ angular
   .controller('BooksIndexController', BooksIndexController);
 
 BooksIndexController.$inject = [ '$http' ];
-function BooksIndexController (   $http  ) {
+function BooksIndexController  (  $http  ) {
   var vm = this;
   $http({
     method: 'GET',

@@ -1,20 +1,27 @@
 <div class="jumbotron">
   <div class="container">
-    <h1>YAY BOOKS!</h1>
-  </div>
-</div>
-
-<div class="container-fluid search-bar">
-  <div class="col-md-3" display="block">
-    <input type="text" class="form-control" ng-model="searchText" placeholder="Search Books">
+    <div class="col-md-6">
+      <h1 class="yay">YAY BOOKS!</h1>
+    </div>
+    <div class="col-md-4 col-md-offset-2">
+      <img class="books-image" src="../public/images/books.png">
+    </div>
   </div>
 </div>
 
 <div class="container-fluid">
-  <div class="col-md-2" ng-repeat="book in booksIndexCtrl.books | orderBy: 'title' | filter: searchText">
-    <div><img class="homepage-image" ng-src="{{book.image}}"></img></div>
-    <p><a ng-href="books/{{book._id}}">{{book.title}}</a></p>
-    <p>{{book.author}}</p>
-    <p>{{book.releaseDate}}</p>
+  <div class="col-md-12 search-bar">
+    <div class="col-md-3" display="block">
+      <input type="text" class="form-control" ng-model="searchText" placeholder="Search Books">
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <div class="col-md-2 books" ng-repeat="book in booksIndexCtrl.books | orderBy: 'title' | filter: searchText">
+      <div><img class="homepage-image" ng-src="{{book.image}}"></img></div>
+      <p><a ng-href="books/{{book._id}}">{{book.title}}</a></p>
+      <p>{{book.author}}</p>
+      <p>{{book.releaseDate}}</p>
+    </div>
   </div>
 </div>
