@@ -13,6 +13,18 @@ angular
     }).then(function onSuccess(res){
       vm.book = res.data
     }, function onError(err){
-      console.log(err)
+      console.log("single book" + err)
     });
+
+    vm.deleteBook = function(book){
+      $http({
+        method: 'DELETE',
+        url: 'https://super-crud.herokuapp.com/books/' + $routeParams.id,
+        data: book
+      }).then(function onSuccess(res){
+        console.log("deleted")
+      }, function onError(err){
+        console.log("delete book" + err)
+      });
+    }
   }
