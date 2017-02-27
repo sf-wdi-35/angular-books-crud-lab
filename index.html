@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="booksApp">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Books App</title>
+
+ 	 <!-- STYLESHEETS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link rel="stylesheet" href="../public/styles/style.css">
+
+   <!-- VENDOR SCRIPTS -->
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+   <!-- APPLICATION SCRIPTS -->
+   <script type="text/javascript" src="../public/scripts/app.js"></script>
+   <script type="text/javascript" src="../public/scripts/controllers/BooksIndexController.js"></script>
+   <script type="text/javascript" src="../public/scripts/controllers/BooksShowController.js"></script>
+
+</head>
+<body>
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="text-center">Bibliothèque</h1>
+      <h3 class="text-center">Your digital catalogue of books</p>
+    </div>
+  </div>
+
+  <div ng-view></div>
+
+</body>
+</html>
