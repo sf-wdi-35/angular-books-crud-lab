@@ -27,10 +27,10 @@ function BooksShowController (  $http,   $routeParams ,  $location) {
         image : livroToUpdate.image,
         releaseDate : livroToUpdate.releaseDate
       }
-    }).then(function successCallback(reponse){
+    }).then(function successCallback(response){
       isso.livros = response.data;
       $location.path('/');
-    }, function errorCallback(reponse){
+    }, function errorCallback(response){
       console.log(response);
     });
   };
@@ -41,7 +41,7 @@ function BooksShowController (  $http,   $routeParams ,  $location) {
       url: 'https://super-crud.herokuapp.com/books/' + livro._id,
     }).then(function successCallback(response){
       $location.path('/');
-    }, function errorCallback(reponse){
+    }, function errorCallback(response){
       console.log(response);
     });
     
