@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="bookApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Hey</title>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/styles/styles.css">
+
+    <!-- ANGULAR SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-route.js"></script>
+
+    <!-- APPLICATION SCRIPTS -->
+    <script src="public/scripts/app.js"></script>
+    <script src="public/scripts/controllers/BooksIndexController.js"></script>
+    <script src="public/scripts/controllers/BooksShowController.js"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+
+          <div class="this will be ng-rep">
+            <div class="row">
+              <input type="text" class="form-control" placeholder="New Book name" ng-model="BooksIndexCtrl.newBook.title">
+              <input type="text" class="form-control" placeholder="New Book author" ng-model="BooksIndexCtrl.newBook.author">
+              <input type="text" class="form-control" placeholder="New Book image" ng-model="BooksIndexCtrl.newBook.image">
+              <input type="text" class="form-control" placeholder="New Book releaseDate" ng-model="BooksIndexCtrl.newBook.releaseDate">
+            </div>
+          </div>
+          <div ng-view></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
