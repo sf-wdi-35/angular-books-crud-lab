@@ -4,8 +4,14 @@
   </div>
 </div>
 
+<div class="container-fluid search-bar">
+  <div class="col-md-3" display="block">
+    <input type="text" class="form-control" ng-model="searchText" placeholder="Search Books">
+  </div>
+</div>
+
 <div class="container-fluid">
-  <div class="col-md-2" ng-repeat="book in booksIndexCtrl.books">
+  <div class="col-md-2" ng-repeat="book in booksIndexCtrl.books | orderBy: 'title' | filter: searchText">
     <div><img class="homepage-image" ng-src="{{book.image}}"></img></div>
     <p><a ng-href="books/{{book._id}}">{{book.title}}</a></p>
     <p>{{book.author}}</p>
