@@ -15,6 +15,9 @@ function config($routeProvider, $locationProvider) {
             templateUrl: '/templates/books-show.html',
             controllerAs: 'booksShowCtrl',
             controller: 'BooksShowController'
+        })
+        .otherwise({
+            redirectTo: '/'
         });
 
     $locationProvider.html5Mode({
