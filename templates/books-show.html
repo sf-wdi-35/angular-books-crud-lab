@@ -1,3 +1,4 @@
+<!-- header -->
 <div class="jumbotron">
   <div class="container">
     <div class="row yay">
@@ -6,19 +7,22 @@
           <h1><span class="glyphicon glyphicon-arrow-left back-arrow" aria-hidden="true"></span></h1>
         </a>
       </div>
-      <div class="col-md-8">
+      <div class="col-md-10">
         <h1>{{booksShowCtrl.book.title}}</h1>
       </div>
     </div>
   </div>
 </div>
 
+<!-- book/edit form -->
 <div class="container">
   <div class="form-inline">
     <div class="row">
+      <!-- image -->
       <div class="col-md-3 col-md-offset-3">
         <img class="showpage-image" ng-src="{{booksShowCtrl.book.image}}"></img>
       </div>
+      <!-- book info/edit form -->
       <form>
         <div class="col-md-3 book-page-text">
           <div class="book-info" ng-hide="editing">{{booksShowCtrl.book.title}}</div>
@@ -33,19 +37,17 @@
           <input ng-show="editing" ng-model="booksShowCtrl.book.image" type="text" class="form-control input-md" placeholder="image">
           <label ng-show="editing">image url</label>
 
+          <!-- buttons -->
           <div>
             <button class='btn btn-default book-info' ng-click="booksShowCtrl.deleteBook(booksShowCtrl.book)" aria-label="delete">
               <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
             </button>
-
             <button class='btn btn-default book-info' ng-hide="editing" ng-click="editing = true" aria-label="edit">
               <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
             </button>
-
             <button class='btn btn-default book-info' ng-show="editing" ng-click="booksShowCtrl.editBook(booksShowCtrl.book); editing=false" aria-label="save">
               <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
             </button>
-
             <button type="button" class='btn btn-default book-info' ng-show="editing" ng-click="booksShowCtrl.cancelEdit(booksShowCtrl.book); editing=false" aria-label="cancel">
               <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
             </button>

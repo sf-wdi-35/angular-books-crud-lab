@@ -12,7 +12,7 @@ function BooksShowController($http, $routeParams, $location) {
     }).then(function onSuccess(res) {
         vm.book = res.data;
     }, function onError(res) {
-        console.log(res);
+        console.log('error', res);
     });
 
     vm.deleteBook = function(book) {
@@ -22,7 +22,7 @@ function BooksShowController($http, $routeParams, $location) {
         }).then(function onSuccess(res) {
             $location.path('/');
         }, function onError(res) {
-            console.log(res);
+            console.log('error', res);
         });
     }
 
@@ -34,12 +34,11 @@ function BooksShowController($http, $routeParams, $location) {
         }).then(function onSuccess(res) {
             $location.path('/');
         }, function onError(res) {
-            console.log(res);
+            console.log('error', res);
         });
     }
 
     vm.cancelEdit = function(book) {
-      $location.path('/books/' + book._id);
-      console.log(book);
+        $location.path('/books/' + book._id);
     }
 }

@@ -1,56 +1,71 @@
 img {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
+
 h1 {
-  font-family: fantasy;
-  font-weight: 600;
+    font-family: fantasy;
+    font-weight: 600;
 }
+
 body {
-  background-image: url("../../public/images/bg.jpg");
+    background-image: url("../../public/images/bg.jpg");
 }
+
 p {
-  color: white;
+    color: white;
 }
+
 a {
-  color: white;
+    color: white;
 }
+
 .book-page-text {
-  color: white;
+    color: white;
 }
+
 .books {
-  margin: 15px;
+    margin: 15px;
 }
+
 .yay {
-  margin-top: 80px;
+    margin-top: 80px;
 }
+
 .books-image {
-  height: 230px;
-  width: 370px;
+    height: 230px;
+    width: 370px;
 }
+
 .homepage-image {
-  height: 200px;
-  width: 125px;
+    height: 200px;
+    width: 125px;
 }
+
 .showpage-image {
-  height: 400px;
-  width: 250px;
+    height: 400px;
+    width: 250px;
 }
+
 .vcenter {
     display: inline-block;
     vertical-align: middle;
     float: none;
 }
+
 .book-info {
-  margin: 5px;
+    margin: 5px;
 }
+
 .search-bar {
-  padding: 20px;
+    padding: 20px;
 }
+
 .jumbotron {
-  background-image: url("../../public/images/bshelf.png");
-  padding-bottom: 25px;
-  min-height: 308px;
+    background-image: url("../../public/images/bshelf.png");
+    padding-bottom: 25px;
+    min-height: 308px;
 }
+
 .container-fluid {
-  padding: 0px;
+    padding: 0px;
 }
