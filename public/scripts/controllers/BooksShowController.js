@@ -2,7 +2,7 @@ angular
   .module('booksApp')
   .controller('BooksShowController', BooksShowController)
 
-BooksShowController.$inject=['$http', '$routeParams', '$location'];
+BooksShowController.$inject=['$http','$routeParams', '$location'];
 
 function BooksShowController($http, $routeParams, $location) {
   var vm = this;
@@ -32,7 +32,7 @@ function BooksShowController($http, $routeParams, $location) {
      }, function onError(response){
      });
   }
-
+ 
   vm.deleteBook = function (bookToDelete) {
     $http({
       method: 'DELETE',

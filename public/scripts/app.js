@@ -13,7 +13,7 @@ angular
         controllerAs: 'booksIndexCtrl',
         controller: 'BooksIndexController'
       })
-      .when('/books/:id', { 
+      .when('/books/:id', {
         templateUrl: '/templates/books-show.html',
         controllerAs: 'booksShowCtrl',
         controller: 'BooksShowController'
