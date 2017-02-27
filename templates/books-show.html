@@ -5,4 +5,11 @@
 	<h3>{{ booksShowCtrl.book.title }}</h3>
 	<h4>By {{booksShowCtrl.book.author}}</h4>
 	<p>Released: {{booksShowCtrl.book.releaseDate}}</p>
+	<button class="btn btn-info">
+	Edit
+	</button>
+
+	<button class="btn btn-danger" ng-click="booksShowCtrl.deleteBook(booksShowCtrl.book)">
+		Delete
+	</button>
 </div>
