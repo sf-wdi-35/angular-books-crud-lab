@@ -9,8 +9,24 @@ BooksShowController.$inject = ['$http', '$routeParams', '$location'];
 
     $http({
       method: 'GET',
-      url: 'https://super-crud.herokuapp.com/books/'+ bookId  
+      url: 'https://super-crud.herokuapp.com/books/'+ bookId
     }).then(function successCallback(json) {
       vm.book = json.data;
     });
+
+    vm.updateBook = functio(book) {
+      $http({
+        method: 'PUT',
+        url: 'https://super-crud.herokuapp.com/books/' + book._id,
+        data: {
+          title: book.title,
+          author: book.author,
+          image: book.image,
+          releaseDate: book.releaseDate
+        }
+      }).then(function successBookUpdate(json) {
+        vm.book = json.data;
+        $location.path('/');
+      });
+    }
   }
