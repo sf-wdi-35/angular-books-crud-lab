@@ -1,0 +1,53 @@
+<!-- show.html -->
+<div class="container">
+
+  <!-- Add Books Form -->
+  <div ng-show="editing" class="row container">
+    <form class="form-horizontal centered" ng-submit="bsc.updateBook(bsc.book)">
+
+        <input class="btn btn-success btn-lg" type="submit" name="submit" value="Save">
+          <label class="control-label"> Title
+            <input class="form-control input-lg" type="text" ng-model="bsc.book.title" name="title" value="" placeholder="book title">
+          </label>
+
+          <label class="control-label"> Author
+            <input class="form-control input-lg" type="text" ng-model="bsc.book.author" name="author" value="" placeholder="book author">
+          </label>
+
+          <label class="control-label"> Date Released
+            <input class="form-control input-lg" type="text" ng-model="bsc.book.releaseDate" name="releaseDate" value="" placeholder="date released">
+          </label>
+          <hr>
+          <label><span class="upload-label">Add an image URL for your book:</span>
+            <input class=" input-lg" type="text" ng-model="bsc.book.image" name="image" value="choose image">
+          </label>
+      </form>
+    </div>
+
+
+
+
+  <!-- Show Single Book -->
+  <div class="container">
+    <div class="book-panel clearfix">
+      <img ng-src="{{ bsc.book.image }}" alt="book pic">
+      <div class="book-info">
+        <h2><a ng-href="/">{{ bsc.book.title }}</a></h2>
+        <p>Author: {{ bsc.book.author }}</p>
+        <p>Date Released: {{ bsc.book.releaseDate }}</p>
+      </div>
+      <hr ng-hide="editing">
+      <div class="book-summary">
+        <h4>Book Summary</h4>
+        <p ng-hide="editing">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <hr>
+      <div class="my-button-group">
+        <button ng-hide="editing" ng-click="editing=true" class="btn btn-lg btn-success"><span class="glyphicon glyphicon-pencil"></span></button>
+        <button ng-show="editing" ng-click="editing=false" class="btn btn-lg btn-success"><span class="glyphicon glyphicon-step-backward"></span></button>
+        <button ng-click="bsc.deleteBook(bsc.book)" class="btn btn-lg btn-danger" type="button" name="delete"><span class="glyphicon glyphicon-trash"></span></button>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,23 @@
+
+<!-- Begin books.html Template -->
+<div class="container">
+
+  <!-- Search Bars -->
+  <div class="container">
+    <input type="text" class="form-control input-lg" ng-model="searchText" placeholder="Search Books" autofocus>
+  </div>
+
+  <!-- Displays All Books -->
+  <div class="container" ng-repeat="book in bic.data.books | filter: searchText as results">
+    <div class="book-panel clearfix">
+      <img ng-src="{{ book.image }}" alt="book pic">
+      <div class="book-info">
+        <h2><a ng-href="books/{{book._id}}">{{ book.title }}</a></h2>
+        <p>Author: {{ book.author }}</p>
+        <p>Date Released: {{ book.releaseDate }}</p>
+      </div>
+      <hr>
+    </div>
+  </div>
+
+</div>
