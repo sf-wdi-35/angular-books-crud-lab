@@ -6,7 +6,6 @@ BooksIndexController.$inject = ['$http'];
 function BooksIndexController(   $http  ){
 	var isso = this;
 
-
 	$http({
 		method: 'GET',
 		url: 'https://super-crud.herokuapp.com/books'
@@ -15,4 +14,5 @@ function BooksIndexController(   $http  ){
 	}, function errorCb(response){
 		console.log(response);
 	})
+
 }

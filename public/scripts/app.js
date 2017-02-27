@@ -10,11 +10,11 @@ function config (  $routeProvider ,  $locationProvider ) {
       controllerAs: 'booksIndexCtrl',
       controller: 'BooksIndexController'
     })
-    // .when('/albums/:id', {
-    //   templateUrl: '/templates/albums-show.html',
-    //   controllerAs: 'booksShowCtrl',
-    //   controller: 'BooksShowController'
-    // })
+    .when('/books/:id', {
+      templateUrl: '/templates/books-show.html',
+      controllerAs: 'booksShowCtrl',
+      controller: 'BooksShowController'
+    })
 
     $locationProvider.html5Mode({
       enabled: true,

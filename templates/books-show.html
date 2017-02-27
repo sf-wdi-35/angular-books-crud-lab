@@ -1,0 +1,46 @@
+<h2>{{booksShowCtrl.livros.title}}</h2>
+
+<hr>
+
+<div class="row">
+	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+		<img ng-src="{{booksShowCtrl.livros.image}}" class="img-responsive">
+	</div>
+
+	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+		<p>Author: {{booksShowCtrl.livros.author}}</p>
+		<p> Release Date: {{booksShowCtrl.livros.releaseDate}}</p>
+
+		<br>
+
+		<!-- edit button -->
+		<a ng-click="editForm=!editForm" class="btn btn-default">Edit book</a>
+
+		<!-- delete button -->
+		<a ng-click="booksShowCtrl.deleteLivro(booksShowCtrl.livros)" class="btn btn-default">Delete book</a>
+
+		<!-- edit form -->
+		<div ng-show="editForm">
+
+			<br>
+
+	    <form ng-show="editForm" ng-submit="booksShowCtrl.updateBook(booksShowCtrl.book)">
+	    <!-- input field for title -->
+	      <div class="form-group">
+	        <input type="text" ng-model="booksShowCtrl.livros.title" class="form-control" placeholder="Title">
+	      </div>
+	      <!-- input field for author -->
+	      <div class="form-group">
+	        <input type="text" ng-model="booksShowCtrl.livros.author" class="form-control" placeholder="Author">
+	      </div>
+	      <!-- input field for image -->
+	      <div class="form-group">
+	        <input type="text" ng-model="booksShowCtrl.livros.image" class="form-control" placeholder="Image">
+	      </div>
+	     
+	      <input type="submit" value="Update Book" class="btn btn-default">
+
+	    </form>
+		</div>
+	</div>
+</div>

@@ -1,6 +1,9 @@
 <div ng-repeat="livros in booksIndexCtrl.livros.books">
-	{{livros.title}}
-	{{livros.author}}
-	<img class="img-responsive" src="{{livros.image}}">
+
+	<p ng-hide="editing"><a href="{{livros._id}}">{{livros.title}}</a></p>
+	<p ng-hide="editing">{{livros.author}}</p>
+	<p ng-hide="editing"><img class="img-responsive" src="{{livros.image}}"><p>
+
+
 </div>
 
