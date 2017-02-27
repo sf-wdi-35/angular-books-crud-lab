@@ -33,7 +33,7 @@ function BooksShowController (  $http,   $routeParams,   $location  ) {
   vm.deleteBook = function(book) {
     $http({
       method: 'DELETE',
-      url: 'https://super-crud.herokuapp.com/book/' + book._id
+      url: 'https://super-crud.herokuapp.com/books/' + book._id
     }).then(function successBookDelete(json) {
       $location.path('/');
     });
