@@ -37,12 +37,16 @@ function BooksIndexController(   $http ) {
     $http({
       method: "PUT",
       url: "https://super-crud.herokuapp.com/books" + book._id,
-      data: book
-    }).then(function successCallback(response) {
-      console.log("Edit was successful!");
-      console.log("response.data ", response.data);
-      }, function errorCallback(response) {
-      console.log("There was an error editing the  book!");
+      data: {
+        title: book.title,
+        author: book.author,
+        releaseDate: book.releaseDate,
+        image: book.image
+      }).then(function successCallback(response) {
+        console.log("Edit was successful!");
+        console.log("response.data ", response.data);
+        }, function errorCallback(response) {
+        console.log("There was an error editing the  book!");
     });
   } // end of PUT request
 
@@ -51,9 +55,9 @@ function BooksIndexController(   $http ) {
     $http({
       method: "DELETE",
       url: "https://super-crud.herokuapp.com/books" + book._id
-    }).then(function successCallback(json){
-      var index = vm.book.indexOf(book);
-      vm.book.splice(index, 1);
+    }).then(function successCallback(response){
+      // var index = vm.book.indexOf(book);
+      // vm.book.splice(index, 1);
     }, function errorCallback(response) {
       console.log("there was an error deleting the book :(");
     });

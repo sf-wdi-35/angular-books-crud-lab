@@ -1,6 +1,56 @@
 
-<div ng-repeat="book in bic.books" class="row">
+<div class="col-md-10 col-md-offset-1">
+  <form class="form-horizontal" ng-submit="bic.createBook()">
+    <fieldset>
 
+      <!-- Form Name -->
+      <legend>Add New Book</legend>
+
+      <!-- Text input -->
+      <div class="form-group">
+          <label class="col-md-4 control-label">Book Title</label>
+          <div class="col-md-4">
+            <input id="title" ng-model="bic.newBook.title" type="text" class="form-control input-md" required="">
+          </div>
+      </div>
+
+      <!-- Text input -->
+      <div class="form-group">
+          <label class="col-md-4 control-label">Book Author</label>
+          <div class="col-md-4">
+            <input id="author" ng-model="bic.newBook.author" type="text" class="form-control input-md" required="">
+          </div>
+      </div>
+
+      <!-- Text input -->
+      <div class="form-group">
+          <label class="col-md-4 control-label">Release Date</label>
+          <div class="col-md-4">
+            <input id="releaseDate" ng-model="bic.newBook.releaseDate" type="text" class="form-control input-md" required="">
+          </div>
+      </div>
+
+      <!-- Text input -->
+      <div class="form-group">
+          <label class="col-md-4 control-label">Image</label>
+          <div class="col-md-4">
+            <input id="image" ng-model="bic.newBook.image" type="text" class="form-control input-md" required="">
+          </div>
+      </div>
+
+      <!-- Button -->
+      <div class="form-group">
+        <label class="col-md-4 control-label">Save Book</label>
+        <div class="col-md-4">
+          <button class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+</div>
+
+<div ng-repeat="book in bic.books" class="row">
     <div class="col-md-10 col-md-offset-1">
       <div class="panel panel-default">
         <div class="panel-body">
@@ -12,32 +62,22 @@
               <ul class="list-group form-inline">
                 <li class="list-group-item">
                   <h4 class='inline-header'>Book title:</h4>
-                  <span ng-hide="editing"><a ng-href="books/{{book._id}}">{{book.title}}</a></span>
-                  <input ng-show="editing" ng-model="book.title" type="text" class="form-control input-md">
+                  <span> <a ng-href="books/{{book._id}}">{{book.title}}</a></span>
                 </li>
                 <li class="list-group-item">
-                  <h4 class='inline-header'>Author:</h4>
-                  <span ng-hide="editing">{{book.author}}</span>
-                  <input ng-show="editing" ng-model="book.author" type="text" class="form-control input-md">
+                  <h4 class='inline-header'>Author: </h4>
+                  <span>{{book.author}}</span>
+
                 </li>
                 <li class="list-group-item">
                   <h4 class='inline-header'>Released date:</h4>
-                  <span ng-hide="editing">{{book.releaseDate}}</span>
-                  <input ng-show="editing" ng-model="book.releaseDate" type="text" class="form-control input-md">
+                  <span >{{ book.releaseDate }}</span>
                 </li>
                 <li class="list-group-item">
-                  <h4 class='inline-header'>Image:</h4>
-                  <span ng-hide="editing">{{book.image}}</span>
-                  <input ng-show="editing" ng-model="book.image" type="text" class="form-control input-md">
+                  <h4 class='inline-header'>Image: </h4>
+                  <span>{{ book.image }}</span>
                 </li>
               </ul>
-            </div>
-          </div>
-          <div class='panel-footer'>
-            <div class='panel-footer'>
-              <button class='btn btn-danger' ng-click="bic.deleteBook(book)">Delete Book</button>
-              <button class='btn btn-info' ng-hide="editing" ng-click="editing = true">Edit Book</button>
-              <button class='btn btn-success' ng-show="editing" ng-click="bic.editBook(book); editing = false">Save Changes</button>
             </div>
           </div>
         </div>
