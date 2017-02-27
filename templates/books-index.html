@@ -1,0 +1,9 @@
+<div ng-repeat="livros in booksIndexCtrl.livros.books">
+
+	<p ng-hide="editing"><a ng-href="/books/{{livros._id}}">{{livros.title}}</a></p>
+	<p ng-hide="editing">{{livros.author}}</p>
+	<p ng-hide="editing"><img class="img-responsive" src="{{livros.image}}"><p>
+
+
+</div>
+
