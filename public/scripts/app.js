@@ -18,6 +18,7 @@ function config ($routeProvider, $locationProvider) {
       controllerAs: 'bookShowController',
       controller: 'BookShowController'
     })
+    .otherwise({ redirectTo: '/'});
 
     $locationProvider.html5Mode({
       enabled: true,
