@@ -22,9 +22,21 @@ angular
         url: 'https://super-crud.herokuapp.com/books/' + $routeParams.id,
         data: book
       }).then(function onSuccess(res){
-        console.log("deleted")
+        $locaation.path('/')
       }, function onError(err){
         console.log("delete book" + err)
+      });
+    }
+
+    vm.editBook = function(book){
+      $http({
+        method: 'PUT',
+        url: 'https://super-crud.herokuapp.com/books/' + $routeParams.id,
+        data: book
+      }).then(function onSuccess(res){
+        vm.book=res.data
+      }, function onError(err){
+        console.log("edit book" + err)
       });
     }
   }

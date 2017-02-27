@@ -14,6 +14,6 @@ function BooksIndexController ($http){
     console.log(res.data);
     vm.books = res.data.books;
   }, function onError(err){
-    console.log(err)
+    console.log("index" + err)
   })
 }
