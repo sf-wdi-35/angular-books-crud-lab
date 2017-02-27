@@ -2,14 +2,14 @@ angular
   .module('bookly')
   .controller('BooksShowController', BooksShowController);
 
-BooksShowController.$inject = ['$http', '$routeParams'];
-  function BooksShowController (  $http,   $routeParams  ) {
+BooksShowController.$inject = ['$http', '$routeParams', '$location'];
+  function BooksShowController ($http,   $routeParams,  $location  ) {
     var vm = this;
-    vm.newBook = {};
+    var bookId = $routeParams.id;
 
     $http({
       method: 'GET',
-      url: '/books/'+ $routeParams.id  // how can we get the id? (hint: check console log from above)
+      url: 'https://super-crud.herokuapp.com/books/'+ bookId  
     }).then(function successCallback(json) {
       vm.book = json.data;
     });
