@@ -2,8 +2,10 @@
 <!-- Begin books.html Template -->
 <div class="container">
 
-  <!-- Search Bar -->
-  <input type="text" class="form-control input-lg" ng-model="searchText" placeholder="Search Books" autofocus>
+  <!-- Search Bars -->
+  <div class="container">
+    <input type="text" class="form-control input-lg" ng-model="searchText" placeholder="Search Books" autofocus>    
+  </div>
 
   <!-- Displays All Books -->
   <div class="container" ng-repeat="book in bic.data.books | filter: searchText">
