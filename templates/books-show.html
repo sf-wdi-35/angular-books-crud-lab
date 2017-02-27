@@ -45,6 +45,7 @@
               <button class='btn btn-danger' ng-click="bsc.deleteBook(bsc.book)">Delete Book</button>
               <button class='btn btn-info' ng-hide="editing" ng-click="editing = true">Edit Book</button>
               <button class='btn btn-success' ng-show="editing" ng-click="bsc.editBook(bsc.book); editing = false">Save Changes</button>
+              <button class='btn btn-info' ng-show="editing" ng-click="editing = false">Cancel</button>
             </div>
           </div>
         </div>
