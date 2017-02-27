@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="bookApp">
 <head>
-  <title>test</title>
+  <title>Angular Book App</title>
 
   <!-- bootstrap script -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
   <!-- stylesheets -->
-  <link rel="stylesheet" href="public/styles/styles.css">
+  <link rel="stylesheet" href="/public/styles/styles.css">
 
   <!-- angular scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
@@ -15,16 +15,18 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-route.min.js"></script>
 
   <!-- application scripts -->
-  <script src="public/scripts/app.js"></script>
-  <script src="public/scripts/controllers/BooksIndexController.js"></script>
-  <!-- <script src="/scripts/controllers/BooksShowController.js"></script> -->
+  <script src="/public/scripts/app.js"></script>
+  <script src="/public/scripts/controllers/BooksIndexController.js"></script>
+  <script src="/public/scripts/controllers/BooksShowController.js"></script>
 
 
 </head>
 <body>
 
-  <div class="col-md-12">
-    <h1>hello</h1>
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Angular Book App</h1>
+    </div>
   </div>
 
   <div ng-view></div>
