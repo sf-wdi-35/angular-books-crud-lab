@@ -14,34 +14,23 @@
 
     <!-- APPLICATION SCRIPTS -->
     <script src="public/scripts/app.js"></script>
+    <script src="public/scripts/controllers/BooksIndexController.js"></script>
 
   </head>
   <body>
-    <h2>The Books, man.</h2>
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
-          <!-- <div ng-view></div> -->
-          <h3>Your Books</h3>
-          <div class="this will be ng-rep" ng-controller="BooksIndexController as BooksIndexCtrl">
+
+          <div class="this will be ng-rep">
             <div class="row">
-              <div class="col-sm-3">
-                <img ng-src="https://cloud.githubusercontent.com/assets/7833470/10892121/866d27bc-8156-11e5-9810-62a875e36c27.jpg" class="img-responsive">
-              </div>
-              <div class="col-sm-9">
-                <h4>Of Mice and Men</h4>
-                <p>
-                  Written by John Steinbeck
-                </p>
-                <p>
-                  Released dec 12, 1950
-                </p>
-              </div>
+              <input type="text" class="form-control" placeholder="New Book name" ng-model="BooksIndexCtrl.newBook.title">
+              <input type="text" class="form-control" placeholder="New Book author" ng-model="BooksIndexCtrl.newBook.author">
+              <input type="text" class="form-control" placeholder="New Book image" ng-model="BooksIndexCtrl.newBook.image">
+              <input type="text" class="form-control" placeholder="New Book releaseDate" ng-model="BooksIndexCtrl.newBook.releaseDate">
             </div>
-
-            </p>
           </div>
-
+          <div ng-view></div>
         </div>
       </div>
     </div>

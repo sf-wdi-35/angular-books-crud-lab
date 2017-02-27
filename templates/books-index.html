@@ -1,0 +1,18 @@
+<h2>The Books, man.</h2>
+  <div ng-repeat="book in booksIndexCtrl.books">
+    <hr>
+    <div class="container-fluid">
+      <div class="col-sm-3">
+        <img ng-src="{{book.image}}" class="img-responsive">
+      </div>
+      <div class="col-sm-9">
+        <h4>{{book.title}}</h4>
+        <p>
+          Written by {{book.author}}
+        </p>
+        <p>
+          Released {{book.releaseDate}}
+        </p>
+      </div>
+    </div>
+  </div>
