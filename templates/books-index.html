@@ -45,12 +45,19 @@
           <button ng-click="bic.createBook(bic.book)"class="col-md-4 btn btn-primary">Submit</button>
         </div>
       </div>
+
+      <!-- Search -->
+      <div class="form-group">
+      <label class="col-md-4 control-label">Search for a Book</label>
+      <div class="col-md-4">
+        <input type="text" class="form-control center-block col-md-4" ng-model="searchText" placeholder="Search Albums">
+      </div>
+
     </fieldset>
   </form>
-
 </div>
 
-<input type="text" class="form-control" ng-model="searchText" placeholder="Search Albums">
+
 <div ng-repeat="book in bic.books | orderBy: 'name' | filter: searchText" class="row">
     <div class="col-md-10 col-md-offset-1">
       <div class="panel panel-default">
@@ -63,11 +70,11 @@
               <ul class="list-group form-inline">
                 <li class="list-group-item">
                   <h4 class='inline-header'>Book title:</h4>
-                  <span> <a ng-href="books/{{book._id}}">{{book.title}}</a></span>
+                  <span> <a ng-href="books/{{book._id}}">{{ book.title }}</a></span>
                 </li>
                 <li class="list-group-item">
                   <h4 class='inline-header'>Author: </h4>
-                  <span>{{book.author}}</span>
+                  <span>{{ book.author }}</span>
 
                 </li>
                 <li class="list-group-item">

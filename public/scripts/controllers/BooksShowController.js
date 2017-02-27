@@ -1,5 +1,3 @@
-console.log("BooksShowController running!");
-
 angular
   .module("angularBooks")
   .controller("BooksShowController", BooksShowController);
@@ -13,7 +11,6 @@ function BooksShowController(   $http,   $routeParams, $location ) {
     method: "GET",
     url: "https://super-crud.herokuapp.com/books/" + $routeParams.id
   }).then(function successCallback(json) {
-    console.log(json.data);
     vm.book = json.data;
   }); // end of GET request
 
