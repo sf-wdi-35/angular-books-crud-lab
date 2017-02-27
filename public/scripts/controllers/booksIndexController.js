@@ -11,7 +11,6 @@ function BooksIndexController(   $http) {
 		url: 'https://super-crud.herokuapp.com/books'	
 	}).then(function successCallback(response){
 		vm.books = response.data.books;
-		console.log(vm.books);
 	}, function errorCallback(error){
 		console.log('There was an error getting data', error);
 	});

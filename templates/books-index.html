@@ -1,7 +1,7 @@
 <div ng-repeat="book in booksIndexCtrl.books" class="row">
 	<div class="col-xs-5 col-md-3"><img ng-src="{{ book.image }}" alt="" class="img-responsive"></div>
 	<div class="col-xs-7 col-md-9">
-		<h3><a ng-href="books/{{book._id}}"></a>{{ book.title }}</h3>
+		<h3><a ng-href="books/{{book._id}}">{{ book.title }}</a></h3>
 		<h4>By {{book.author}}</h4>
 		<p>Released: {{book.releaseDate}}</p>
 

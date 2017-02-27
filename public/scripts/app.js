@@ -9,7 +9,12 @@ function config (  $routeProvider, 	 $locationProvider) {
 			templateUrl: '/templates/books-index.html',
 			controller: 'BooksIndexController',
 			controllerAs: 'booksIndexCtrl'
-		});
+		})
+		.when('/books/:id', {
+			templateUrl: '/templates/books-show.html',
+			controller: 'BooksShowController',
+			controllerAs: 'booksShowCtrl'
+		})
 
 	$locationProvider.html5Mode({
 		enabled: true,

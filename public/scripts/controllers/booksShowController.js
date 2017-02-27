@@ -9,9 +9,10 @@ function BooksShowController (  $http, 	 $routeParams) {
 
 	$http({
 		method: 'GET',
-		url: 'https://super-crud.herokuapp.com/books' + bookId,
+		url: 'https://super-crud.herokuapp.com/books/' + bookId,
 	}).then(function successCallback(response){
-		console.log('This is the bsc success response', response);
+		vm.book = response.data;
+		console.log(vm.book)
 	}, function errorCallback(error) {
 		console.log('Error', error);
 	})
